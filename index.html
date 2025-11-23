@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Axiom Pulse Replica - Real-time token discovery dashboard." />
+    <title>Axiom Pulse Replica</title>
+    
+    <!-- Performance Optimization: Preconnect to CDNs -->
+    <link rel="preconnect" href="https://cdn.tailwindcss.com" />
+    <link rel="preconnect" href="https://esm.sh" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://api.dicebear.com" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              background: '#050505',
+              card: '#0e1014',
+              cardHover: '#13161b',
+              border: '#1e2128',
+              accent: '#3b82f6',
+              positive: '#10b981',
+              negative: '#f87171', /* Lighter red for better contrast on dark bg */
+              textMain: '#e5e7eb',
+              textMuted: '#9ca3af',
+              gold: '#fbbf24',
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              mono: ['JetBrains Mono', 'monospace'],
+            },
+            animation: {
+              'flash-green': 'flashGreen 0.5s ease-out forwards',
+              'flash-red': 'flashRed 0.5s ease-out forwards',
+              'shimmer': 'shimmer 2s linear infinite',
+              'in': 'fadeIn 0.2s ease-out',
+            },
+            keyframes: {
+              flashGreen: {
+                '0%': { backgroundColor: 'rgba(16, 185, 129, 0.2)' },
+                '100%': { backgroundColor: 'transparent' },
+              },
+              flashRed: {
+                '0%': { backgroundColor: 'rgba(239, 68, 68, 0.2)' },
+                '100%': { backgroundColor: 'transparent' },
+              },
+              shimmer: {
+                '0%': { backgroundPosition: '-1000px 0' },
+                '100%': { backgroundPosition: '1000px 0' }
+              },
+              fadeIn: {
+                '0%': { opacity: '0', transform: 'scale(0.95)' },
+                '100%': { opacity: '1', transform: 'scale(1)' }
+              }
+            }
+          },
+        },
+      };
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        background-color: #050505;
+        color: #e5e7eb;
+        font-family: 'Inter', sans-serif;
+        overflow-x: hidden;
+      }
+      ::-webkit-scrollbar { width: 6px; height: 6px; }
+      ::-webkit-scrollbar-track { background: #050505; }
+      ::-webkit-scrollbar-thumb { background: #1e2128; border-radius: 3px; }
+      ::-webkit-scrollbar-thumb:hover { background: #374151; }
+    </style>
+    <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@18.2.0",
+    "react/jsx-runtime": "https://esm.sh/react@18.2.0/jsx-runtime",
+    "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
+    "react-dom": "https://esm.sh/react-dom@18.2.0",
+    "@reduxjs/toolkit": "https://esm.sh/@reduxjs/toolkit@2.2.1?external=react,react-dom",
+    "react-redux": "https://esm.sh/react-redux@9.1.0?external=react,react-dom",
+    "@tanstack/react-query": "https://esm.sh/@tanstack/react-query@5.24.1?external=react,react-dom",
+    "lucide-react": "https://esm.sh/lucide-react@0.344.0?external=react,react-dom",
+    "clsx": "https://esm.sh/clsx@2.1.0",
+    "tailwind-merge": "https://esm.sh/tailwind-merge@2.2.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "tailwindcss": "https://aistudiocdn.com/tailwindcss@^4.1.17",
+    "next": "https://aistudiocdn.com/next@^16.0.3",
+    "next/": "https://aistudiocdn.com/next@^16.0.3/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
